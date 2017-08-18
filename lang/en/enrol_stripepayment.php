@@ -26,6 +26,8 @@ $string['addtogroup'] = 'Add to group';
 $string['addtogroup_help'] = 'If you select a group here, then when a user completes the payment process and is enrolled in this course, they will be added to this group.';
 $string['assignrole'] = 'Assign role';
 $string['assignrole_help'] = 'If you select a role here, then when a user completes the payment process and is enrolled in this course, they will be assigned this role.';
+$string['billingaddress'] = 'Require users to enter their billing address';
+$string['billingaddress_desc'] = 'This sets the Stripe payment option for whether the user should be asked to input their billing address. It is off by default, but it is a good idea to turn it on.';
 $string['secretkey'] = 'Stripe Secret Key';
 $string['publishablekey'] = 'Stripe Publishable Key';
 $string['secretkey_desc'] = 'The API Secret Key of Stripe account';
@@ -65,6 +67,8 @@ $string['status'] = 'Allow Stripe enrolments';
 $string['status_desc'] = 'Allow users to use Stripe to enrol into a course by default.';
 $string['unenrolselfconfirm'] = 'Do you really want to unenrol yourself from course "{$a}"?';
 $string['messageprovider:stripepayment_enrolment'] = 'Message Provider';
+$string['validatezipcode'] = 'Validate the billing postal code';
+$string['validatezipcode_desc'] = 'This sets the Stripe payment option for whether the billing address should be verified as part of processing the payment. They strongly recommend that this option should be on, to reduce fraud.';
 
 $string['maxenrolled'] = 'Max enrolled users';
 $string['maxenrolled_help'] = 'Specifies the maximum number of users that can stripepayment enrol. 0 means no limit.';

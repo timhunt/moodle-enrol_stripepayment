@@ -256,12 +256,15 @@ class enrol_stripepayment_plugin extends enrol_plugin {
                 $userlastname    = $USER->lastname;
                 $useraddress     = $USER->address;
                 $usercity        = $USER->city;
+                $useremail       = $USER->email;
                 $instancename    = $this->get_instance_name($instance);
                 if (!empty($instance->customtext1)) {
                     $message = format_string($instance->customtext1);
                 } else {
                     $message = get_string("paymentrequired");
                 }
+                $validatezipcode = $this->get_config('validatezipcode');
+                $billingaddress = $this->get_config('billingaddress');
 
                 include($CFG->dirroot.'/enrol/stripepayment/enrol.html');
             }

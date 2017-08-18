@@ -54,6 +54,14 @@ if ($ADMIN->fulltree) {
     get_string('expiredaction', 'enrol_stripepayment'), get_string('expiredaction_help', 'enrol_stripepayment'),
     ENROL_EXT_REMOVED_SUSPENDNOROLES, $options));
 
+    $settings->add(new admin_setting_configcheckbox('enrol_stripepayment/validatezipcode',
+            get_string('validatezipcode', 'enrol_stripepayment'),
+            get_string('validatezipcode_desc', 'enrol_stripepayment'), 1));
+
+    $settings->add(new admin_setting_configcheckbox('enrol_stripepayment/billingaddress',
+            get_string('billingaddress', 'enrol_stripepayment'),
+            get_string('billingaddress_desc', 'enrol_stripepayment'), 0));
+
     // --- enrol instance defaults ----------------------------------------------------------------------------
     $settings->add(new admin_setting_heading('enrol_stripepayment_defaults',
         get_string('enrolinstancedefaults', 'admin'), get_string('enrolinstancedefaults_desc', 'admin')));
